@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     private Rigidbody enemyRB;
     private GameObject player;
 
+    public int Length { get; internal set; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +22,11 @@ public class Enemy : MonoBehaviour
     {
         Vector3 lookDirection = (player.transform.position - transform.forward).normalized;
 
-        enemyRB.AddForce(lookDirection * speed);  
+        enemyRB.AddForce(lookDirection * speed);
+
+        if (transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
