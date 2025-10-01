@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Powerup Indicator
       objectReference: {fileID: 0}
+    - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_TagString
+      value: Powerup
+      objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -265,11 +273,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd5555088952419ebf0eb82e9096fa5, type: 3}
---- !u!1 &818911697 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
-  m_PrefabInstance: {fileID: 89069322}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1086224995
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +289,7 @@ GameObject:
   - component: {fileID: 1086225001}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   hasPowerup: 0
-  powerupIndicator: {fileID: 818911697}
+  powerupIndicator: {fileID: 1954960192}
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3278820495138356308, guid: 63e080c5f65838e4cbaef59b9f704fc7, type: 3}
+  powerupPrefab: {fileID: 0}
   enemyCount: 0
+  waveNumber: 1
 --- !u!4 &1476840705
 Transform:
   m_ObjectHideFlags: 0
@@ -875,6 +880,11 @@ Transform:
   - {fileID: 1211419928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1954960192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+  m_PrefabInstance: {fileID: 89069322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1814446614932635622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -883,6 +893,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6375236063725665671, guid: 5c52cca5288d1974cb950baaa4865977, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6898831115431091537, guid: 5c52cca5288d1974cb950baaa4865977, type: 3}
       propertyPath: m_Name
       value: Powerup
